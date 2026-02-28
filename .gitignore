@@ -1,0 +1,19 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+/uv.lock
+
+# Virtual environments
+.venv
+
+# Data folder
+/data/
+
+# Migrations
+**/migrations/*
+!**/migrations/__init__.py
+**/LC_MESSAGES/django.mo

@@ -1,0 +1,11 @@
+[project]
+name = "offerdjango"
+version = "0.1.0"
+description = "Django app to get offer from Вангер.рф"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "django==5.1",
+    "django-admin-sortable2>=2.3.1",
+    "django-filer>=3.4.4",
+]
