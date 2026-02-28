@@ -1,0 +1,5 @@
+# Key for Django secret key
+SECRET_KEY=django-insecure-qwtbtbqentibyqwkntybqwnkynikoqwebjkyqekjnbvyq3w
+
+# Enable Django DEBUG
+DEBUG=
