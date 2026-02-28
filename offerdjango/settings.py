@@ -26,6 +26,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Libraries
+    'easy_thumbnails',
+    'filer',
+    'adminsortable2',
+
+    # Local apps
     'about.apps.AboutConfig',
 ]
 
@@ -76,18 +82,25 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 LANGUAGE_CODE = 'en-us'
-
 TIME_ZONE = 'UTC'
-
 USE_I18N = True
-
 USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.getenv('STATIC_ROOT', DATA_DIR / 'static')
-
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
 MEDIA_ROOT = os.getenv('MEDIA_ROOT', DATA_DIR / 'media')
+
+
+# Libraries settings
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    #'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
+FILER_CANONICAL_URL = str( os.getenv('FILER_CANONICAL_URL', DATA_DIR / 'filer'))
