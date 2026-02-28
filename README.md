@@ -35,3 +35,4 @@ https://www.figma.com/design/csU67B0SQVZO1AkwvMZa3D/
 ![planet.png](./readme-files/image.png)
 - Много фоток конвертировано в jpeg -> png (компрессия)
 - Текст `Золотая медаль по научным исследованиям` содержал странный `\n` символ, который заметил VSCode. Удалено.
+- Жалко, что Django 5.2. Хотелось [partialdef](https://docs.djangoproject.com/en/6.0/ref/templates/builtins/#partialdef) использовать

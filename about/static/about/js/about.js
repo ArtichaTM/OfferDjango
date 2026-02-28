@@ -1,11 +1,16 @@
 $(document).ready(function(){
-  $('.slider').slick({
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    dots: true,
-    arrows: true
-  });
+    $('.slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true
+    });
+    $('.slider-nav').slick({
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        asNavFor: '.slider',
+        focusOnSelect: true,
+        centerMode: true
+    });
 });

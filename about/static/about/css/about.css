@@ -9,3 +9,47 @@
   text-align: center;
   gap: 20px;
 }
+
+
+/* Slick */
+
+.slick-slide {
+  border: solid 4px;
+  border-radius: 5px;
+  margin-left: 15px;
+  border-color: transparent;
+}
+
+.slider-nav .slick-current {
+  border-color: white;
+}
+
+.slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-list {
+  margin: 0px 35px;
+}
+
+.slick-arrow {
+  background-color: var(--bs-danger);
+  color: var(--bs-body-color);
+  padding: 6px;
+  border-radius: 50%;
+  width: auto;
+  height: auto;
+}
+
+.slick-arrow::before {
+  color: var(--bs-body-color);
+  opacity: 1;
+  font-size: 20px;
+}
+
+.slick-arrow:hover {
+  border-color: var(--bs-danger-subtle);
+  background-color: rgba(220, 53, 69, 0.1);
+}
