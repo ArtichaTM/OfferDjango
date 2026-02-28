@@ -1,4 +1,6 @@
 from django.db import models
+from django.dispatch import receiver
+from django.db.models.signals import post_delete
 
 from filer.fields.image import FilerImageField
 
@@ -21,3 +23,8 @@ class AboutImages(models.Model):
         ordering = ['-order']
         verbose_name = "Изображение"
         verbose_name_plural = "Изображения"
+
+
+@receiver(post_delete, sender=AboutImages)
+def mymodel_post_delete(sender, instance: AboutImages, using, **kwargs):
+    instance.logo.delete()
