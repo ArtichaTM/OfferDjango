@@ -38,16 +38,21 @@
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Преимущества</a>
+          <a class="nav-link" href="#advantages">Преимущества</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Фотографии</a>
+          <a class="nav-link" href="#photo">Фотографии</a>
         </li>
       </ul>
     </div>
 
+
     <div class="d-flex">
-      <a class="btn btn-primary bg-danger border-danger" href="/login/">Войти</a>
+      {% if user.is_anonymous %}
+      <a class="btn btn-primary bg-danger border-danger" href="{% url 'admin:login' %}">Войти</a>
+      {% else %}
+      <a class="btn btn-primary bg-danger border-danger" href="{% url 'admin:index' %}">Управление</a>
+      {% endif %}
     </div>
   </div>
 </nav>
