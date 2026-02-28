@@ -55,9 +55,7 @@
   color: var(--bs-body-color);
 }
 
-#photo {
-  max-height: 400px;
-}
-#photo > div {
-  max-height: 400px;
+.slider .slick-track > img {
+  height: 500px !important;
+  object-fit: contain;
 }
