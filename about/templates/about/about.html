@@ -1,14 +1,75 @@
-{% extends "base.html" %}
+{% extends "./base.html" %}
 {% load static %}
 
-
 {% block header %}
-<link href="{% static "about/css/base.css" %}" rel="stylesheet">
+{{ block.super }}
+<link href="{% static "css/slick.css" %}" rel="stylesheet">
+<script src="{% static "js/slick.min.js" %}"></script>
+<link href="{% static "about/css/about.css" %}" rel="stylesheet">
 {% endblock header %}
 
+
 {% block body %}
-<div class="container-md text-center mt-5" id="header-text">
+<main>
+
+<div class="container text-center my-5" id="header-text">
     <h1 class="display-4 fw-bold">Космическое агентство</h1>
     <p class="lead text-muted mt-3 width-matching">Национальное управление по аэронавтике и исследованию космического пространства — ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США.</p>
 </div>
+
+<div class="container my-5">
+  <div class="row g-4 align-items-center">
+    <div class="col-12 col-md-6 order-last order-md-first">
+      <div class="">
+        <img class="img-fluid" src="{% static "about/jpg/planet.jpg" %}">
+      </div>
+    </div>
+
+    <div class="col-12 col-md-6" id="advantages">
+      <div class="row row-cols-2 g-3">
+        <div class="col">
+          <div class="grid-cell">
+            <img class="img-fluid" src="{% static "about/svg/advantages/1.svg" %}">
+            <p>Спейс шаттлы — пилотируемые корабли</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="grid-cell">
+            <img class="img-fluid" src="{% static "about/svg/advantages/2.svg" %}">
+            <p>Лучшее телескопическое оборудование</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="grid-cell">
+            <img class="img-fluid" src="{% static "about/svg/advantages/3.svg" %}">
+            <p>Исследовательские станции на Луне — шаг к новым открытиям!</p>
+          </div>
+        </div>
+        <div class="col">
+          <div class="grid-cell">
+            <img class="img-fluid" src="{% static "about/svg/advantages/4.svg" %}">
+            <p>Золотая медаль по научным исследованиям</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="bg-body-tertiary py-5" id="photo">
+    <div class="container gap-5">
+        <h1 class="text-center my-5">Фотографии</h1>
+        <div class="my-5 slickable">
+            <div><h3>1</h3></div>
+            <div><h3>2</h3></div>
+            <div><h3>3</h3></div>
+            <div><h3>4</h3></div>
+            <div><h3>5</h3></div>
+            <div><h3>6</h3></div>
+        </div>
+    </div>
+</div>
+
+</main>
+<script src="{% static "about/js/about.js" %}"></script>
 {% endblock body %}
