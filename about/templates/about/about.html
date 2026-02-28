@@ -5,7 +5,9 @@
 {{ block.super }}
 <link href="{% static "css/slick.css" %}" rel="stylesheet">
 <script src="{% static "js/slick.min.js" %}"></script>
+
 <link href="{% static "about/css/about.css" %}" rel="stylesheet">
+<script src="{% static "about/js/about.js" %}"></script>
 {% endblock header %}
 
 
@@ -59,7 +61,7 @@
 <div class="bg-body-tertiary py-5" id="photo">
     <div class="container gap-5">
         <h1 class="text-center my-5">Фотографии</h1>
-        <div class="my-5 slickable">
+        <div class="my-5 slider">
             <div><h3>1</h3></div>
             <div><h3>2</h3></div>
             <div><h3>3</h3></div>
@@ -71,5 +73,4 @@
 </div>
 
 </main>
-<script src="{% static "about/js/about.js" %}"></script>
 {% endblock body %}
