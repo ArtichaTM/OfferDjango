@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: uv-export-req
+        name: Run uv export to generate req.pip
+        entry: uv export --format requirements.txt --output-file req.pip
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true
