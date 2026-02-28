@@ -18,6 +18,6 @@ class AboutImages(models.Model):
     )
 
     class Meta:
-        ordering = ['order']
+        ordering = ['-order']
         verbose_name = "Изображение"
         verbose_name_plural = "Изображения"
