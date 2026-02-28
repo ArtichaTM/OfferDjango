@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block header %}
+<link href="{% static "about/css/base.css" %}" rel="stylesheet">
+{% endblock header %}
+
+{% block body %}
+<div class="container-md text-center mt-5" id="header-text">
+    <h1 class="display-4 fw-bold">Космическое агентство</h1>
+    <p class="lead text-muted mt-3 width-matching">Национальное управление по аэронавтике и исследованию космического пространства — ведомство, относящееся к федеральному правительству США и подчиняющееся непосредственно президенту США.</p>
+</div>
+{% endblock body %}

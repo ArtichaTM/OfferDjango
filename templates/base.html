@@ -1,14 +1,54 @@
+{% load static %}
 <!doctype html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Document</title>
-  <meta name="description" content="Short page description" />
-  <link rel="icon" href="/favicon.ico" />
+  <title>NASA — Космическое агенство</title>
+  <meta name="description" content="NASA — Космическое агенство" />
+  <link rel="icon" href="{% block favicon %}{% static "ico/favicon.ico" %}{% endblock favicon %}" />
+
+  <!-- Bootstrap -->
+  <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+  <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
+
+  <link href="{% static "css/base.css" %}" rel="stylesheet">
+
+  {% block header %}
+  {% endblock header %}
 </head>
-<body>
-    {% block body %}
-    {% endblock body %}
+<body data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg mb-3">
+  <div class="container">
+
+    <div class="d-flex align-items-center">
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+        aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="{% static '/about/svg/logo.svg' %}" alt="Logo" height="36">
+      </a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Преимущества</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Фотографии</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="d-flex">
+      <a class="btn btn-primary" href="/login/">Войти</a>
+    </div>
+  </div>
+</nav>
+
+{% block body %}
+{% endblock body %}
 </body>
 </html>
